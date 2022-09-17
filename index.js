@@ -11,9 +11,9 @@ app.use(
   })
 )
 
-// app.get('/', (request, response) => {
-//     response.json( db.getSongs )
-//   })
+app.get('/', (request, response) => {
+    response.json( {info: welcome})
+  })
 
   app.get('/songs', db.getSongs)
 
