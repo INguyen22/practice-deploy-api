@@ -7,7 +7,7 @@ const port = 3001
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
-    extended: false,
+    extended: true,
   })
 )
 
@@ -15,7 +15,7 @@ app.use(
 //     response.json({ info: 'Node.js, Express, and Postgres API' })
 //   })
 
-  app.get('/songs', db.getSongs)
+  app.use('/songs', db.getSongs)
 
   app.listen(port, () => {
     console.log(`App running on port ${port}.`)
