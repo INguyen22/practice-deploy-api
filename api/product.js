@@ -4,7 +4,7 @@ const db = require('./queries')
 
 router.get("/", async (req, res) => {
     try {
-        res.json({db})
+        res.json(db.getSongs)
     } catch (error) {
         console.error(error)
         return res.status(500).send("sever boo")
