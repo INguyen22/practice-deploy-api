@@ -12,7 +12,7 @@ app.use(
 )
 
 app.get('/', (request, response) => {
-    response.send('hello')
+    response.json({ info: 'Node.js, Express, and Postgres API' })
   })
 
   app.get('/songs', db.getSongs)
@@ -21,5 +21,4 @@ app.get('/', (request, response) => {
     console.log(`App running on port ${port}.`)
   })
 
-  // Export the Express API
-module.exports = app;
+  module.exports = app
