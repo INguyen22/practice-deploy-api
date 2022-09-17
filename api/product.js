@@ -1,10 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const db = require('./queries')
+// const db = require('./queries')
 
 router.get("/", async (req, res) => {
     try {
-        db.getSongs
+        res.json({
+            status: 200,
+            message: 'WORK PLEASE'
+        });
     } catch (error) {
         console.error(error)
         return res.status(500).send("sever boo")
