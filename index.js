@@ -10,10 +10,10 @@ app.use(
     extended: true,
   })
 )
-const data = db.getSongs
 
-app.get('/', (request, response) => data
-)
+// app.get('/', (request, response) => {
+//     response.json( db.getSongs )
+//   })
 
   app.get('/songs', db.getSongs)
 
