@@ -7,13 +7,15 @@ const port = 3001
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
-    extended: false,
+    extended: true,
   })
 )
+const data = db.getSongs
 
-app.get('/', db.getSongs )
+app.get('/', (request, response) => data
+)
 
-  // app.get('/api/v1/songs', db.getSongs)
+  app.get('/songs', db.getSongs)
 
   app.listen(port, () => {
     console.log(`App running on port ${port}.`)
