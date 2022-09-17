@@ -19,7 +19,7 @@ const pool = new Pool({
       //   obj[currentSong.decade].push(currentSong)
       //   return obj
       // }, {})
-      response.status(200).json(results.rows)
+      return response.status(200).json(results.rows)
     })
   }
 
