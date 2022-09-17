@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "name": "practice-deploy-api",
     "builds": [
       {
         "src": "./index.js",
