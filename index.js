@@ -11,11 +11,11 @@ app.use(
   })
 )
 
-app.get('/', (request, response) => {
-    response.json({ info: 'Node.js, Express, and Postgres API' })
-  })
+// app.get('/', (request, response) => {
+//     response.json( db.getSongs )
+//   })
 
-  app.get('/songs', db.getSongs)
+  app.get('/', db.getSongs)
 
   app.listen(port, () => {
     console.log(`App running on port ${port}.`)
