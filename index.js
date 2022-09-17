@@ -37,7 +37,7 @@ const port = process.env.PORT || 3001
 const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'user1',
-  host: 'localhost',
+  host: 'practice-deploy-api.vercel.app',
   database: 'onehitwonders',
   password: 'password',
   port: 5432,
