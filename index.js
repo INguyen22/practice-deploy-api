@@ -12,7 +12,7 @@ app.use(
 )
 
 app.get('/', (request, response) => {
-    response.send(db.getSongs)
+    response.send('hello')
   })
 
   app.get('/songs', db.getSongs)
