@@ -15,7 +15,7 @@ app.use(
 //     response.json( db.getSongs )
 //   })
 
-  app.get('/songs', db.getSongs)
+  app.get('/', db.getSongs)
 
   app.listen(port, () => {
     console.log(`App running on port ${port}.`)
