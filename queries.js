@@ -8,7 +8,7 @@ const pool = new Pool({
 })
 
   const getSongs = (request, response) => {
-    pool.query('SELECT * FROM songs ORDER BY id ASC', (error, results) => {
+    return pool.query('SELECT * FROM songs ORDER BY id ASC', (error, results) => {
       if (error) {
         throw error
       }
