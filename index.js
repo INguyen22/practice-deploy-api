@@ -1,5 +1,5 @@
 const express = require('express')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 const app = express()
 const cors = require('cors')
 const db = require('./queries')
@@ -23,8 +23,6 @@ app.get('/', (request, response) => {
 
 app.get('/songs', db.getSongs)
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}.`)
-})
+app.listen(process.env.PORT || 3001)
 
   module.exports = app

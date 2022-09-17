@@ -1,10 +1,12 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'user1',
-  host: 'practice-deploy-api.vercel.app',
+  host: 'localhost',
   database: 'onehitwonders',
   password: 'password',
   port: 5432,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
 })
 
   const getSongs = (request, response) => {
@@ -19,7 +21,7 @@ const pool = new Pool({
       //   obj[currentSong.decade].push(currentSong)
       //   return obj
       // }, {})
-      return response.status(200).json(results.rows)
+      response.status(200).json(results.rows)
     })
   }
 
